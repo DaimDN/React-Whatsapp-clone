@@ -13,9 +13,40 @@ export default class Chat extends Component {
                 "Message" : "Hello Everyone, How is everyone doing and how is life",
                 "Date" : "12:05 PM"
             
-            }
-    
+            }   ,
+            {"Name": "daim",
+                "Group" : "Mugals",
+                "Message" : "Hello Everyone, How is everyone doing and how is life",
+                "Date" : "12:05 PM"
             
+            }   
+            ,{"Name": "daim",
+            "Group" : "Mugals",
+            "Message" : "Hello Everyone, How is everyone doing and how is life",
+            "Date" : "12:05 PM"
+        
+        }  , 
+        {"Name": "daim",
+                "Group" : "Mugals",
+                "Message" : "Hello Everyone, How is everyone doing and how is life",
+                "Date" : "12:05 PM"
+            
+            }             
+            ],
+            users: [
+             {Name: "Daim", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Hashir", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Rauf", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
+             {Name: "Amy", img: "https://www.flaticon.com/svg/static/icons/svg/1256/1256650.svg"},
             ]
         }
         
@@ -52,24 +83,49 @@ export default class Chat extends Component {
     render() {
         console.log(this.state.message)
         return (
-            <div className="container" style={{boxShadow: '0px 0px 13px 1px black', marginTop: '10px', height: '83vh'}}>
+            <div className="container original" style={{boxShadow: '0px 0px 13px 1px black', marginTop: '10px', height: '83vh'}}>
         <div style={{display: "flex", flex : '1', }}>
-            <div style={{width: '30%', backgroundColor: '#F1F1F1', height: '83vh'}}>
-       <div className="title2">
-           <Input onKeyPress={this.SearchHandler} ></Input>
-       </div>
-       </div>
+            <div style={{width: '30%', backgroundColor: 'f1f1f1', height: '83vh'}}>
+       
+       <div class="your-class mx-auto" style={{width: '18vw'}}>
+          {this.state.users.map((names)=>{
+              return <div className="people"><img src={names.img} className="personImage"/> {names.Name}</div>
+          })}
+         </div>
+
+         <hr/>
+         <div className="usersection">
+          {this.state.users.map((names)=>{
+             return <div style={{}}>
+             <div style={{marginTop: '2px'}}>
+             <img src={names.img} className="personImage"></img>            
+             <p style={{marginLeft: ''}}>{names.Name}</p>
+           
+           
+             </div>
+             <hr/>
+              </div>
+         })}
+    
+
+          </div>
+
+
+         </div>
+         
 
 
 
 
             <div>
-            <div className="chat">
             <div className="title">  <p className="text-white text">{this.state.message[0].Group}</p></div>
 
+            <div className="chat" id="messages">
+
+           
             {this.state.message.map((list)=>{
 
-                return <div>   <div class="aqua text-white">
+                return <div >   <div class="aqua text-white">
             {list.Message}
             <br/><br/>
            <div className="chat-text"> {list.Date} </div>    

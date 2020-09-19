@@ -1,10 +1,15 @@
 .chat{
-    height: 72vh;
-      overflow: hidden;
-    overflow: scroll;
+    height: 63vh;
+    overflow-y: scroll;
+   
     background-image: url("https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25");
 }
 
+.usersection{
+    overflow: scroll !important;
+    height: 62vh;
+    overflow: hidden;
+}
 .title{
     height: 50px;
     background-color: #1B5E20;
@@ -68,3 +73,15 @@
     border-radius: 10px;
   }
   
+.original{
+    background-color: #F1F1F1;
+}
+
+.personImage{
+    height: 35px;
+    width: 35px;
+}
+
+.people{
+    font-size: 12px;
+}
